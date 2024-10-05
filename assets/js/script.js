@@ -7,7 +7,7 @@ const elementToggleFunc = function (elem) { elem.classList.toggle("active"); }
 
 // function to download file directly
 function downloadFile(filename, content) {
-  const blob = new Blob([content], { type: 'text/plain' });
+  const blob = new Blob([content], { type: 'application/pdf' }); // Use 'application/pdf' for PDF files
   const link = document.createElement('a');
   link.href = URL.createObjectURL(blob);
   link.download = filename;
