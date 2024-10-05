@@ -15,6 +15,11 @@ function downloadFile(Abhinav_M_Resume, /Abhinav_M_Resume.pdf) {
   document.body.removeChild(link);
 }
 
+// Bind the download function to the link's click event
+document.getElementById('download-link').addEventListener('click', function(event) {
+  event.preventDefault();  // Prevent the default behavior of the link
+  downloadFile('Abhinav_M_Resume.pdf', '/Abhinav_M_Resume.pdf');  // Replace with your actual URL
+});
 
 // sidebar variables
 const sidebar = document.querySelector("[data-sidebar]");
