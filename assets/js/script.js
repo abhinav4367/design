@@ -6,9 +6,9 @@
 const elementToggleFunc = function (elem) { elem.classList.toggle("active"); }
 
 // Function to download an existing PDF from a URL
-function downloadFile(Abhinav_M_Resume, /Abhinav_M_Resume.pdf) {
+function downloadFile(Abhinav_M_Resume, Abhinav_M_Resume.pdf) {
   const link = document.createElement('a');
-  link.href = /Abhinav_M_Resume.pdf;  // URL to the existing PDF file
+  link.href = Abhinav_M_Resume.pdf;  // URL to the existing PDF file
   link.download = Abhinav_M_Resume;  // Desired file name for download
   document.body.appendChild(link);
   link.click();
@@ -18,7 +18,7 @@ function downloadFile(Abhinav_M_Resume, /Abhinav_M_Resume.pdf) {
 // Bind the download function to the link's click event
 document.getElementById('download-link').addEventListener('click', function(event) {
   event.preventDefault();  // Prevent the default behavior of the link
-  downloadFile('Abhinav_M_Resume.pdf', '/Abhinav_M_Resume.pdf');  // Replace with your actual URL
+  downloadFile('Abhinav_M_Resume.pdf', 'Abhinav_M_Resume.pdf');  // Replace with your actual URL
 });
 
 // sidebar variables
