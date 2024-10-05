@@ -5,16 +5,16 @@
 // element toggle function
 const elementToggleFunc = function (elem) { elem.classList.toggle("active"); }
 
-// function to download file directly
-function downloadFile(filename, content) {
-  const blob = new Blob([content], { type: 'application/pdf' }); // Use 'application/pdf' for PDF files
+// Function to download an existing PDF from a URL
+function downloadFile(Abhinav_M_Resume, /Abhinav_M_Resume.pdf) {
   const link = document.createElement('a');
-  link.href = URL.createObjectURL(blob);
-  link.download = filename;
+  link.href = pdfUrl;  // URL to the existing PDF file
+  link.download = filename;  // Desired file name for download
   document.body.appendChild(link);
   link.click();
   document.body.removeChild(link);
 }
+
 
 // sidebar variables
 const sidebar = document.querySelector("[data-sidebar]");
