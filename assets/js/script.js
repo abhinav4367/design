@@ -8,8 +8,8 @@ const elementToggleFunc = function (elem) { elem.classList.toggle("active"); }
 // Function to download an existing PDF from a URL
 function downloadFile(Abhinav_M_Resume, /Abhinav_M_Resume.pdf) {
   const link = document.createElement('a');
-  link.href = pdfUrl;  // URL to the existing PDF file
-  link.download = filename;  // Desired file name for download
+  link.href = /Abhinav_M_Resume.pdf;  // URL to the existing PDF file
+  link.download = Abhinav_M_Resume;  // Desired file name for download
   document.body.appendChild(link);
   link.click();
   document.body.removeChild(link);
